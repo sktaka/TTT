@@ -37,22 +37,7 @@ vps="aneka";
 cd
 
 # check registered ip
-wget -q -O IP $source/debian7/IP.txt
-if ! grep -w -q $MYIP IP; then
-	echo "
-      System Menu By TTT
-[ YOUR IP NOT REGISTER ON MY SCRIPT ]
-         RM 20 PER IP/VPS
-----==== CONTACT FOR REGISTER ====----
-[ Telegram :@Shirokagetaka ]
-"
 
-
-
-	rm /root/IP
-	rm -f /root/IP
-	exit
-fi
 
 # disable ipv6
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
